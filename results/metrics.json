@@ -1,0 +1,127 @@
+{
+  "image": {
+    "raw": {
+      "accuracy": 0.8312,
+      "mean_confidence": 0.8706371273955872,
+      "ece": 0.03943712739558722,
+      "nll": 0.5043727267964693
+    },
+    "calibrated": {
+      "accuracy": 0.8312,
+      "mean_confidence": 0.8303926075530853,
+      "ece": 0.007922544571045348,
+      "nll": 0.48836277326351063
+    },
+    "selective": {
+      "threshold": 0.7478057632025197,
+      "coverage": 0.7106,
+      "accuracy_when_answering": 0.9468055164649591,
+      "accuracy_of_abstained": 0.5473393227366966,
+      "aurc": 0.03907525112033678
+    }
+  },
+  "text": {
+    "raw": {
+      "accuracy": 0.9245,
+      "mean_confidence": 0.9816301662987589,
+      "ece": 0.060515297662611676,
+      "nll": 0.2883944669718011
+    },
+    "calibrated": {
+      "accuracy": 0.9245,
+      "mean_confidence": 0.9249510374134849,
+      "ece": 0.038200985748313945,
+      "nll": 0.2200759332716169
+    },
+    "selective": {
+      "threshold": 0.8836855465383349,
+      "coverage": 0.877,
+      "accuracy_when_answering": 0.9606613454960091,
+      "accuracy_of_abstained": 0.6666666666666666,
+      "aurc": 0.015181735921374456
+    }
+  },
+  "ood": {
+    "false_alarm_rate_on_cifar": 0.0578,
+    "sets": {
+      "digits": {
+        "auroc_combined": 0.9737132000000001,
+        "auroc_max_softmax": 0.7869672,
+        "auroc_by_signal": {
+          "layer1": 0.9885120000000001,
+          "layer2": 0.9022815999999998,
+          "layer3": 0.6742156,
+          "layer4": 0.6424778999999999,
+          "energy": 0.8768665999999999
+        },
+        "detected": 0.878,
+        "raw_model_mean_confidence": 0.6822820699202613,
+        "raw_model_answers_over_90pct": 0.222,
+        "answered_after_metacognition": 0.037
+      },
+      "photo_crops": {
+        "auroc_combined": 0.8572279999999999,
+        "auroc_max_softmax": 0.8147408,
+        "auroc_by_signal": {
+          "layer1": 0.8627277,
+          "layer2": 0.7354845999999999,
+          "layer3": 0.5902678,
+          "layer4": 0.5573207,
+          "energy": 0.8911918
+        },
+        "detected": 0.328,
+        "raw_model_mean_confidence": 0.6559448477911933,
+        "raw_model_answers_over_90pct": 0.146,
+        "answered_after_metacognition": 0.158
+      },
+      "noise": {
+        "auroc_combined": 0.9971838000000001,
+        "auroc_max_softmax": 0.6381384,
+        "auroc_by_signal": {
+          "layer1": 0.995483,
+          "layer2": 0.9997228,
+          "layer3": 0.9524832999999999,
+          "layer4": 0.8763026,
+          "energy": 0.5056238000000001
+        },
+        "detected": 1.0,
+        "raw_model_mean_confidence": 0.8660801522759558,
+        "raw_model_answers_over_90pct": 0.516,
+        "answered_after_metacognition": 0.0
+      }
+    }
+  },
+  "cross_modal_simulation": {
+    "assumed_reliability": 0.8,
+    "results_by_true_caption_reliability": {
+      "0.95": {
+        "image_only_accuracy": 0.8312,
+        "with_text_accuracy": 0.9734
+      },
+      "0.8": {
+        "image_only_accuracy": 0.8312,
+        "with_text_accuracy": 0.9378
+      },
+      "0.6": {
+        "image_only_accuracy": 0.8312,
+        "with_text_accuracy": 0.8856
+      }
+    }
+  },
+  "fusion_pairs": {
+    "n_pairs": 2000,
+    "legacy_rule": {
+      "deferred": 0.5495,
+      "reported_only_text": 0.4055,
+      "reported_only_image": 0.045,
+      "note": "the legacy rule always discards one modality"
+    },
+    "metacognitive": {
+      "both_answered": 0.6335,
+      "accuracy_when_both_answered": 0.9068666140489345,
+      "partial": 0.3285,
+      "deferred": 0.038,
+      "raw_joint_accuracy_if_always_answering": 0.777
+    }
+  }
+}

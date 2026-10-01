@@ -1,0 +1,22 @@
+{
+  "image": {
+    "temperature": 1.2770198781551874,
+    "target_accuracy": 0.95,
+    "answer_threshold": 0.7478057632025197,
+    "familiarity_threshold": -2.8275336913531874
+  },
+  "text": {
+    "temperature": 1.9343625963631932,
+    "target_accuracy": 0.95,
+    "answer_threshold": 0.8836855465383349
+  },
+  "fusion": {
+    "mention_reliability": 0.8
+  },
+  "_provenance": {
+    "split_seed": 0,
+    "n_image_calibration": 5000,
+    "n_text_calibration": 2000,
+    "ood_false_alarm_rate": 0.05
+  }
+}

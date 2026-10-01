@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+data/
+checkpoints/
+logs/
+results/cache/*_features.npz
+.DS_Store
+.idea/
+.vscode/
